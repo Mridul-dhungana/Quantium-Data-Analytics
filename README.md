@@ -13,7 +13,7 @@ The goal of this project was to analyze chip purchasing behavior for a large ret
   * Cleaned data by removing outliers (e.g., a customer making 200-pack purchases).
   * Engineered new features: `Pack Size` and `Brand Name` from product descriptions.
   * Merged transaction data with customer segments (`Lifestage` and `Premium Type`).
-* **Key Insight:** Mainstream Young Singles/Couples and Mainstream Retirees are the highest contributors to sales.
+* **Key Insight:** Budget Older Families contribute the most sales. Mainstream Young Singles/Couples and Mainstream Retirees are the next two groups, and Young Singles/Couples buy Kettle more often than the average customer.
 
 ### 2. Experimentation and Uplift Testing
 
@@ -27,7 +27,28 @@ The goal of this project was to analyze chip purchasing behavior for a large ret
 
 ### 3. Commercial Reporting
 
-* Summarized findings into a professional report for stakeholders, focusing on the "Why" behind the data.
+* Summarized the customer and product findings in a Tableau dashboard for the Category Manager.
+
+---
+
+## Customer Analytics Dashboard
+
+Older customers are 58% of chip units. The concentration to act on is 175 g packs and Kettle.
+
+[![Customer Analytics Dashboard](images/dashboard-preview.png)](https://public.tableau.com/app/profile/mridul.dhungana/viz/QuantiumDataAnalytics/CustomerAnalyticsDashboard)
+
+[View the interactive dashboard](https://public.tableau.com/app/profile/mridul.dhungana/viz/QuantiumDataAnalytics/CustomerAnalyticsDashboard)
+
+### Key findings
+
+- Older Singles/Couples, Retirees, and Older Families are 58% of units.
+- Kettle, Smiths, Doritos, and Pringles are half of units sold. Kettle alone is 17%.
+- 175 g packs are 27% of units, at an average price of $3.84.
+- Mainstream customers buy the most units. Spend per transaction is about $7.40 for Mainstream and $7.30 for Budget and Premium.
+
+### Tools
+
+Tableau, Python, calculated fields, dashboard design
 
 ---
 
@@ -38,6 +59,7 @@ The goal of this project was to analyze chip purchasing behavior for a large ret
   * `pandas` and `numpy` for data manipulation
   * `matplotlib` and `seaborn` for visualization
   * `scipy.stats` for the uplift t-test
+* **Dashboard:** Tableau Public
 
 ---
 
@@ -51,6 +73,8 @@ The goal of this project was to analyze chip purchasing behavior for a large ret
 ├── Trial and Control stores.ipynb    # Trial vs control uplift test
 ├── Chips Analytics Report.pdf        # Stakeholder report
 ├── Quantium Data Analytics.twbx      # Tableau workbook
+├── images/
+│   └── dashboard-preview.png         # Customer analytics dashboard preview
 └── README.md
 ```
 
@@ -58,8 +82,8 @@ The goal of this project was to analyze chip purchasing behavior for a large ret
 
 ## 🚀 Key Findings
 
-1. **Top Segment:** "Mainstream - Young Singles/Couples" are a major growth lever. They are more likely to buy 175g packs and specific brands like Tyrells or Kettle.
-2. **Brand Preference:** Customers are loyal to specific brands, and pack size significantly influences the "Price per unit."
+1. **Top segments:** Budget Older Families contribute the most sales. Mainstream Young Singles/Couples and Mainstream Retirees are next, and Young Singles/Couples buy Kettle more often than the average customer.
+2. **Pack size and price:** 175 g packs average $3.84. Larger packs cost more per packet: 330 g averages $5.70 and 380 g averages $6.15.
 3. **Trial result:** Do not roll the new chip layout out. Store 77 is the only store with a trial-window lift in sales and customers, that lift ends in May, and part of the March–April gap is store 233 falling. Store 86 does not sustain a lift. Store 88 does not have one.
 
 ---
